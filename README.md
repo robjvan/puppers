@@ -2,26 +2,37 @@
 
 Puppers mobile application, built with Flutter.
 
-## Purpose
-
-It was insinuated that I didn't have the skill level to work with a development team, so I rebuilt their app.  
-By myself.
-
 ## Features
 
-- Cool Feature 1
+### Random photos
 
-Sed ut quis voluptatum qui sunt. Sed enim reiciendis. Velit ullam aut consequuntur quas voluptas iure.
+- Access a constant stream of new pupper pics from other users and third-party APIs
 
-- Cool Feature 2
+### Search by breed or sub-breed
 
-Sed ut quis voluptatum qui sunt. Sed enim reiciendis. Velit ullam aut consequuntur quas voluptas iure.
+- Filter pupper pics to search for your favorite breed or sub-breed  
 
-- Cool Feature 3
+### Upload your pupper
 
-Sed ut quis voluptatum qui sunt. Sed enim reiciendis. Velit ullam aut consequuntur quas voluptas iure.
+- Show off your pupper for everyone to see
+
+### Vote on other user pups
+
+- Like and unlike pupper pics from other users.  Browse most loved and most hated puppers
+
+### Sync across devices
+
+- Sync favorites, settings, and likes across multiple devices
+
+## Architecture
+
+- State management handled by Redux
+- Navigation, localization, local storage handled by GetX
+- Authentication, cloud storage, data collections handled with Firebase
+- Web image search handled with public API
 
 ## Download
 
 - [Android](https://#)
 - [Landing Page](https://#)
+<!-- - [Landing Page](https://puppers.robjvan.ca) -->
