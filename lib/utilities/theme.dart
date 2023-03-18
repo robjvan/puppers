@@ -4,7 +4,7 @@ class AppTheme {
   static ThemeData themeData = ThemeData(
     primarySwatch: Colors.green,
     useMaterial3: true,
-    brightness: Brightness.dark,
+    // brightness: Brightness.light,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     // textTheme: const TextTheme(
     //   headlineLarge: TextStyle(
