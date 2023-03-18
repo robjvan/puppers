@@ -1,14 +1,15 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:puppers_mobile/firebase_options.dart';
 import 'package:puppers_mobile/redux/app_reducer.dart';
 import 'package:puppers_mobile/redux/app_state.dart';
 import 'package:puppers_mobile/utilities/utilities.dart';
 import 'package:redux/redux.dart';
 import 'package:redux_logging/redux_logging.dart';
 import 'package:redux_thunk/redux_thunk.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,16 +36,19 @@ class PuppersApp extends StatelessWidget {
   const PuppersApp(this.store, {super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'app-title'.tr,
-      translations: AppTranslations(),
-      locale: Get.deviceLocale,
-      fallbackLocale: const Locale('en', 'US'),
-      getPages: AppRoutes.getPages,
-      initialRoute: AppRoutes.initialRoute,
-      theme: AppTheme.themeData,
+  Widget build(final BuildContext context) {
+    return StoreProvider<AppState>(
+      store: store,
+      child: GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'app-title'.tr,
+        translations: AppTranslations(),
+        locale: Get.deviceLocale,
+        fallbackLocale: const Locale('en', 'US'),
+        getPages: AppRoutes.getPages,
+        initialRoute: AppRoutes.initialRoute,
+        theme: AppTheme.themeData,
+      ),
     );
   }
 }
