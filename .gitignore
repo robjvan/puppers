@@ -45,3 +45,6 @@ app.*.map.json
 
 # Private file containg API keys
 /lib/utilities/app_keys.dart
+
+# Google Firebase config
+/android/app/google-services.json
