@@ -9,7 +9,7 @@ class AppState {
   });
 
   factory AppState.initial() => const AppState(
-        useDarkMode: true,
+        useDarkMode: false,
       );
       
   AppState copyWith({
